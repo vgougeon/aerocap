@@ -19,7 +19,7 @@ const HomeSection = (props) => {
                         <motion.div key={1} className="flex flex-col" initial={{ opacity: 0, x:-50, height:0}} 
                         animate={{ opacity: 1, x: 0, height: "auto"}} exit={{ opacity: 0, x: 50, height:0}}
                         transition={{ type:'tween', duration: 0.2}}>
-                            <p className="mt-2 text-width">Ici, vous pourrez mettre une courte description d'au moins 3 lignes pour la typo tu vois ce que je veux dire</p>
+                            <p className="mt-2 text-width">AeroCap est une capsule hybride innovante qui vous apportera une expérience hors du commun !</p>
                             <div className="flex flex-wrap">
                                 <a href="#find" className="flex items-center justify-center h-10 px-3 mt-5 mr-2 bg-green-500 border-2 border-blue-300 rounded-md hover:bg-blue-600 whitespace-nowrap w-min">
                                     Choisir un trajet
