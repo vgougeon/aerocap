@@ -6,7 +6,7 @@ const Footer = (props) => {
                 <img src="/48h.png" className="h-full mx-2" />
             </div>
             <div className="flex items-center justify-center">
-                <span className="my-2 text-xs text-gray-300">Made with by Vincent GOUGEON</span>
+                {/* <span className="my-2 text-xs text-gray-300">Made with by Vincent GOUGEON</span> */}
             </div>
         </footer>
     );
