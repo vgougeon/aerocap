@@ -24,8 +24,8 @@ const team = Object.entries(persons.reduce((acc, i) => (acc[i.team] = acc[i.team
 console.log(team)
 const Person = (props) => {
     return (  
-        <div className="relative col-span-1 pb-5 overflow-hidden bg-white border border-gray-300 rounded">
-            <h3 className="mx-4 mt-4 text-lg font-semibold leading-4 tracking-wide">{ props.name } 
+        <div className="relative flex flex-col justify-center col-span-1 overflow-hidden bg-white border border-gray-300 rounded py-7">
+            <h3 className="mx-4 text-lg font-semibold leading-4 tracking-wide">{ props.name } 
             {" "}
             <span className="font-normal">{ props.lastName }</span>
             </h3>
@@ -60,7 +60,9 @@ const TeamSection = (props) => {
             
                 { team.map(([name, persons]) => 
                     <>
-                        <h3 className="w-full my-5 text-xl font-semibold max-width">{ name }</h3>
+                        <h3 className="flex items-center w-full my-5 text-xl font-semibold max-width">
+                            <span className="px-1.5 py-0.5 mr-2 text-xs font-normal text-white bg-gray-600 rounded">TEAM</span> { name }
+                        </h3>
                         <div className="relative grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 max-width">
                         { persons.map(person =>
                             <Person {...person} />
