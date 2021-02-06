@@ -1,25 +1,47 @@
 import { motion } from "framer-motion";
 
-const team = [
-    { name: "Nicolas", lastName: "Hermosilla", job:"B3 INFO Réseau" }
+let persons = [
+    { name: "Fadela", lastName: "El Miliani", job: "Chef de projet", team: "Chef de projet", r: -100, t: -50 },
+
+    { name: "Nicolas", lastName: "Hermosilla", job:"Responsable technique", team:"Equipe technique", r: -120, t: -35},
+    { name: "Nicolas", lastName: "Seillé", job:"Tech team", team:"Equipe technique"},
+    { name: "Paul", lastName: "Berdier", job:"Tech team", team:"Equipe technique", r: -100, t: -75},
+
+    { name: "Théo", lastName: "Arnal", job:"Développeur", team:"Développeur" , r: -170, t: -35},
+    { name: "Raphael", lastName: "Arabeyre", job:"Développeur", team:"Développeur", r: -110, t: -65},
+    { name: "Thomas", lastName: "Alzonne", job:"Développeur", team:"Développeur", r: -110, t: -65},
+
+    { name: "Jade", lastName: "Fillet", job:"Responsable Création / Design", team:"Création/Design", r: -145, t: -85},
+    { name: "Melina", lastName: "Mathieu", job:"Dessinatrice industriel", team:"Création/Design", r: -110, t: -85},
+    
+    { name: "Théo", lastName: "CASANO", job:"Animation et Modélisation 3D", team:"Animation 3D", r: -110, t: -85},
+    { name: "Noah", lastName: "Barthelemy", job:"Animation et Modélisation 3D", team:"Animation 3D", r: -110, t: -85},
+
+    { name: "Emma", lastName: "Degas", job: "Montage vidéo", team:"Conception video & Animation", r: -110, t: -70},
+    { name: "Mickael", lastName: "Bagdian", job: "Montage vidéo", team:"Conception video & Animation", r: -110, t: -55},
 ]
+const team = Object.entries(persons.reduce((acc, i) => (acc[i.team] = acc[i.team] ? [...acc[i.team], i] : [i], acc), []))
+console.log(team)
 const Person = (props) => {
     return (  
-        <div className="col-span-1 pb-5 bg-white border border-gray-300 rounded">
+        <div className="relative col-span-1 pb-5 overflow-hidden bg-white border border-gray-300 rounded">
             <h3 className="mx-4 mt-4 text-lg font-semibold leading-4 tracking-wide">{ props.name } 
             {" "}
             <span className="font-normal">{ props.lastName }</span>
             </h3>
             <span className="mx-4 text-sm leading-3">{ props.job }</span>
-            <hr className="mt-3 mb-5" />
-            <p className="mx-4"></p>
+            <img className="absolute top-0 right-0 object-contain w-full h-64" 
+            style={{ right: props.r, top: props.t }}
+            src={`/avatars/${props.lastName.toUpperCase()} ${props.name}.png`} />
+            {/* <hr className="mt-3 mb-5" /> */}
+            
         </div>
     );
 }
 
 const TeamSection = (props) => {
     return (  
-        <div className="flex flex-col items-center justify-center min-h-screen px-5 bg-white xl:px-0">
+        <div id="team" className="flex flex-col items-center justify-center min-h-screen px-5 bg-white xl:px-0 pt-52">
             <div className="grid grid-cols-2 mb-5 max-width">
                 <div className="col-span-1">
                     <svg xmlns="http://www.w3.org/2000/svg" className="absolute text-blue-400 transform -translate-x-40 -translate-y-40 w-96 h-96 opacity-10" 
@@ -31,16 +53,22 @@ const TeamSection = (props) => {
                         <path d="M17.997 18h-11.995l-.002-.623c0-1.259.1-1.986 1.588-2.33 1.684-.389 3.344-.736 2.545-2.209-2.366-4.363-.674-6.838 1.866-6.838 2.491 0 4.226 2.383 1.866 6.839-.775 1.464.826 1.812 2.545 2.209 1.49.344 1.589 1.072 1.589 2.333l-.002.619zm4.811-2.214c-1.29-.298-2.49-.559-1.909-1.657 1.769-3.342.469-5.129-1.4-5.129-1.265 0-2.248.817-2.248 2.324 0 3.903 2.268 1.77 2.246 6.676h4.501l.002-.463c0-.946-.074-1.493-1.192-1.751zm-22.806 2.214h4.501c-.021-4.906 2.246-2.772 2.246-6.676 0-1.507-.983-2.324-2.248-2.324-1.869 0-3.169 1.787-1.399 5.129.581 1.099-.619 1.359-1.909 1.657-1.119.258-1.193.805-1.193 1.751l.002.463z"/></svg>
                     <motion.h1 initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1}}
-                    className="text-5xl font-bold tracking-wide">L'équipe</motion.h1>
-                    <p className="mt-2">Découvrez les 14 profils qui composent notre équipe</p>
+                    className="text-5xl font-bold tracking-wide">Nos équipes</motion.h1>
+                    <p className="mt-2">Découvrez nos différentes équipes et nos différents profils !</p>
                 </div>
             </div>
-            <div className="relative grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 max-width">
-                { team.map((person) => 
-                    <Person {...person} />
+            
+                { team.map(([name, persons]) => 
+                    <>
+                        <h3 className="w-full my-5 text-xl font-semibold max-width">{ name }</h3>
+                        <div className="relative grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 max-width">
+                        { persons.map(person =>
+                            <Person {...person} />
+                        )}
+                        </div> 
+                    </>
+                    
                 )}
-                
-            </div>
             
         </div>
     );
