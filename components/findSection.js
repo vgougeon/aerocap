@@ -38,7 +38,7 @@ const Select = (props) => {
             <AnimatePresence>
                 {(suggest.length > 0 || (suggest.length === 0 && typeof (props.value) === 'string' && props.value.length > 1)) &&
                     <motion.div key={1} initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }}
-                        className="absolute bottom-0 w-full overflow-y-scroll bg-white shadow h-80 top-full">
+                        className="absolute bottom-0 z-30 w-full overflow-y-scroll bg-white shadow h-80 top-full">
                         {suggest.map((item, i) =>
                             <div onClick={() => select(item)} className="flex items-center h-10 px-3 cursor-pointer hover:bg-gray-100" key={i}>
                                 <span className="font-semibold">{item.address?.locality}{","}</span>

@@ -3,8 +3,8 @@ const axios = require('axios')
 const geolib = require('geolib')
 export default async function helloAPI(req, res) {
   // const result = await axios.get(`http://dev.virtualearth.net/REST/v1/Locations/${"Paris"}?maxResults=10&key=AqbL-5RHig7wP3r1UAN79qWen6TfUce6dtcCALCsMcn7-YxmUyaaUjzXA2Sjz4AW`)
-  const start = await axios.get(`http://dev.virtualearth.net/REST/v1/Locations/${req.query.start}?maxResults=1&key=AqbL-5RHig7wP3r1UAN79qWen6TfUce6dtcCALCsMcn7-YxmUyaaUjzXA2Sjz4AW`)
-  const end = await axios.get(`http://dev.virtualearth.net/REST/v1/Locations/${req.query.end}?maxResults=1&key=AqbL-5RHig7wP3r1UAN79qWen6TfUce6dtcCALCsMcn7-YxmUyaaUjzXA2Sjz4AW`)
+  const start = await axios.get(`http://dev.virtualearth.net/REST/v1/Locations/${req.query.start}?countryFilter=FR&maxResults=1&key=AqbL-5RHig7wP3r1UAN79qWen6TfUce6dtcCALCsMcn7-YxmUyaaUjzXA2Sjz4AW`)
+  const end = await axios.get(`http://dev.virtualearth.net/REST/v1/Locations/${req.query.end}?countryFilter=FR&maxResults=1&key=AqbL-5RHig7wP3r1UAN79qWen6TfUce6dtcCALCsMcn7-YxmUyaaUjzXA2Sjz4AW`)
   
   // res.status(200).json(start.data.resourceSets[0].resources[0])
   const startP = {

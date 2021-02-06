@@ -23,7 +23,7 @@ const team = Object.entries(persons.reduce((acc, i) => (acc[i.team] = acc[i.team
 console.log(team)
 const Person = (props) => {
     return (  
-        <div className="relative flex flex-col justify-center col-span-1 overflow-hidden bg-white border border-gray-300 rounded py-7">
+        <div className="relative flex flex-col justify-center col-span-1 overflow-hidden bg-white border border-gray-300 rounded person py-7 hover:border-blue-500">
             <h3 className="mx-4 text-lg font-semibold leading-4 tracking-wide">{ props.name } 
             {" "}
             <span className="font-normal">{ props.lastName }</span>
