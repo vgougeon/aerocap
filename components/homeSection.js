@@ -21,6 +21,9 @@ const HomeSection = (props) => {
                         transition={{ type:'tween', duration: 0.2}}>
                             <p className="mt-2 text-width">Ici, vous pourrez mettre une courte description d'au moins 3 lignes pour la typo tu vois ce que je veux dire</p>
                             <div className="flex">
+                                <a href="#find" className="flex items-center justify-center h-10 px-3 mt-5 mr-2 bg-green-500 border-2 border-blue-300 rounded-md hover:bg-blue-600 whitespace-nowrap w-min">
+                                    Choisir un trajet
+                                </a>
                                 <a href="#product" className="flex items-center justify-center h-10 px-3 mt-5 mr-2 bg-blue-500 border-2 border-blue-300 rounded-md hover:bg-blue-600 whitespace-nowrap w-min">
                                     En savoir plus
                                 </a>
