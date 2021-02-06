@@ -8,11 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@n8tb1t/use-scroll-position": "^2.0.3",
+    "autoprefixer": "^10.0.4",
+    "framer-motion": "^3.3.0",
     "next": "latest",
+    "postcss": "^8.1.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "autoprefixer": "^10.0.4",
-    "postcss": "^8.1.10",
     "tailwindcss": "^2.0.2"
   }
 }
