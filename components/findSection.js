@@ -87,16 +87,16 @@ const FindSection = (props) => {
                         <path d="M15.787 7.531c-5.107 2.785-12.72 9.177-15.787 15.469h2.939c.819-2.021 2.522-4.536 3.851-5.902 8.386 3.747 17.21-2.775 17.21-11.343 0-1.535-.302-3.136-.92-4.755-2.347 3.119-5.647 1.052-10.851 1.625-7.657.844-11.162 6.797-8.764 11.54 3.506-3.415 9.523-6.38 12.322-6.634z" /></svg>
                     <motion.h1 initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1 }}
-                        className="text-5xl font-bold tracking-wide">Commander un trajet</motion.h1>
+                        className="text-3xl font-bold tracking-wide md:text-5xl">Commander un trajet</motion.h1>
                     <p className="mt-2">Déplacez vous sans stress avec Aerocap</p>
                 </div>
-                <div className="flex justify-end col-span-1">
+                <div className="justify-end hidden col-span-1 md:flex">
                     <img src="/capsule.png" className="h-36" />
                 </div>
             </div>
             <div className="z-10 w-full h-auto bg-white border border-gray-200 rounded shadow max-width">
                 <h2 className="m-4 text-lg font-semibold">Définir un trajet</h2>
-                <div className="grid grid-cols-2 gap-4 m-4">
+                <div className="grid grid-cols-1 gap-4 m-4 md:grid-cols-2">
                     <Select name="Point de départ" value={start} setValue={setStart} />
                     <Select name="Destination" value={end} setValue={setEnd} />
                 </div>

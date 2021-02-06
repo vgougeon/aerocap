@@ -27,7 +27,7 @@ const ProductSection = (props) => {
                     className="text-5xl font-bold tracking-wide">Aerocap</motion.h1>
                     <p className="mt-2">Ici, vous pourrez mettre une courte description d'au moins 2 ligne pour la typo</p>
                 </div>
-                <div className="flex justify-end col-span-1">
+                <div className="justify-end hidden col-span-1 md:flex">
                     <img src="/capsule.png" className="h-36" />
                 </div>
             </div>
