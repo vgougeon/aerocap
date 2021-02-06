@@ -4,7 +4,7 @@ let persons = [
     { name: "Fadela", lastName: "El Miliani", job: "Chef de projet", team: "Chef de projet", r: -100, t: -50 },
 
     { name: "Nicolas", lastName: "Hermosilla", job:"Responsable technique", team:"Equipe technique", r: -120, t: -35},
-    { name: "Nicolas", lastName: "Seillé", job:"Tech team", team:"Equipe technique"},
+    { name: "Nicolas", lastName: "Seillé", job:"Tech team", team:"Equipe technique", r: -135, t: -65},
     { name: "Paul", lastName: "Berdier", job:"Tech team", team:"Equipe technique", r: -100, t: -75},
 
     { name: "Théo", lastName: "Arnal", job:"Développeur", team:"Développeur" , r: -170, t: -35},
@@ -15,7 +15,6 @@ let persons = [
     { name: "Melina", lastName: "Mathieu", job:"Dessinatrice industriel", team:"Création/Design", r: -110, t: -85},
     
     { name: "Théo", lastName: "CASANO", job:"Animation et Modélisation 3D", team:"Animation 3D", r: -110, t: -85},
-    { name: "Noah", lastName: "Barthelemy", job:"Animation et Modélisation 3D", team:"Animation 3D", r: -110, t: -85},
 
     { name: "Emma", lastName: "Degas", job: "Montage vidéo", team:"Conception video & Animation", r: -110, t: -70},
     { name: "Mickael", lastName: "Bagdian", job: "Montage vidéo", team:"Conception video & Animation", r: -110, t: -55},
@@ -61,7 +60,21 @@ const TeamSection = (props) => {
                 { team.map(([name, persons]) => 
                     <>
                         <h3 className="flex items-center w-full my-5 text-xl font-semibold max-width">
-                            <span className="px-1.5 py-0.5 mr-2 text-xs font-normal text-white bg-gray-600 rounded">TEAM</span> { name }
+                            { name.includes('Chef') ?
+                            <span className="px-1.5 py-0.5 mr-2 text-xs font-normal text-white bg-blue-600 rounded">CHEF</span>:
+                            name.includes('technique') ?
+                            <span className="px-1.5 py-0.5 mr-2 text-xs font-normal text-white bg-red-700 rounded">TECH</span>:
+                            name.includes('Développeur') ?
+                            <span className="px-1.5 py-0.5 mr-2 text-xs font-normal text-white bg-green-600 rounded">DEV</span>:
+                            name.includes('Création') ?
+                            <span className="px-1.5 py-0.5 mr-2 text-xs font-normal text-white bg-purple-500 rounded">CREA</span>:
+                            name.includes('3D') ?
+                            <span className="px-1.5 py-0.5 mr-2 text-xs font-normal text-white bg-gray-800 rounded">3D</span>:
+                            name.includes('video') ?
+                            <span className="px-1.5 py-0.5 mr-2 text-xs font-normal text-black bg-gray-200 rounded">VIDEO</span>:
+                            <span className="px-1.5 py-0.5 mr-2 text-xs font-normal text-black bg-gray-200 rounded">TEAM</span>
+                            }
+                             { name }
                         </h3>
                         <div className="relative grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 max-width">
                         { persons.map(person =>

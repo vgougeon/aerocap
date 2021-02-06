@@ -10,7 +10,10 @@
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "autoprefixer": "^10.0.4",
+    "axios": "^0.21.1",
     "framer-motion": "^3.3.0",
+    "geolib": "^3.3.1",
+    "moment": "^2.29.1",
     "next": "latest",
     "postcss": "^8.1.10",
     "react": "^17.0.1",

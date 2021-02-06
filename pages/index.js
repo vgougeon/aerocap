@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import FindSection from '../components/findSection';
 import Footer from '../components/footer';
 import Header from '../components/header'
 import ProductSection from '../components/productionSection';
@@ -10,13 +11,14 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Head>
-        <title>Create Next App</title>
+        <title>Aerocap</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
       </Head>
       <Header />
       <Scroller />
       <HomeSection />
+      <FindSection />
       <ProductSection />
       <TeamSection />
       <Footer />
