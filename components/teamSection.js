@@ -12,8 +12,8 @@ let persons = [
     { name: "Thomas", lastName: "Alzonne", job:"Développeur", team:"Développeur", r: -110, t: -65},
 
     { name: "Jade", lastName: "Fillet", job:"Responsable Création / Design", team:"Création/Design", r: -145, t: -85},
-    { name: "Melina", lastName: "Mathieu", job:"Dessinatrice industriel", team:"Création/Design", r: -110, t: -85},
     
+    { name: "Melina", lastName: "Mathieu", job:"Animation et Modélisation 3D", team:"Animation 3D", r: -110, t: -85},
     { name: "Théo", lastName: "CASANO", job:"Animation et Modélisation 3D", team:"Animation 3D", r: -110, t: -85},
 
     { name: "Emma", lastName: "Degas", job: "Montage vidéo", team:"Conception video & Animation", r: -110, t: -70},
