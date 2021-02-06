@@ -102,6 +102,7 @@ const FindSection = (props) => {
                 </div>
                 {status && <>
                     <hr />
+                    { status.distance /1000 < 800 ?
                     <div className="w-full p-4 bg-white">
                         <h2 className="text-lg font-semibold">Votre trajet <span className="text-green-500">est disponible !</span></h2>
                         <span className="">Distance :  <b className="text-xl">{(status.distance / 1000).toFixed(2)}km</b></span><br />
@@ -111,6 +112,11 @@ const FindSection = (props) => {
                             C'est parti !
                         </a>
                     </div>
+                    :<div className="w-full p-4 bg-white">
+                        <h2 className="text-lg font-semibold">Votre trajet <span className="text-red-600">est non disponible !</span></h2>
+                        <span className="">Distance :  <b className="text-xl text-red-600">{(status.distance / 1000).toFixed(2)}km</b></span><br />
+                    </div>
+                    }
                     </>
                 }
             </div>
