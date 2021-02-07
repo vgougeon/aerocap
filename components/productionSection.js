@@ -36,7 +36,7 @@ const ProductSection = (props) => {
                 <Case title="Vers l'infini et au delà !" description="A 500 mètres d'altitude, profitez du paysage tout autour de vous." />
                 <Case title="A fond la capsule !" description="A plus de 200km/h , AeroCap vous assure un voyage rapide jusqu'à votre destination !" />
                 <Case title="Accessibilité" description="Toi plus moi, plus eux, plus tous ceux qui le veulent...Notre capsule est accessible à tous !" />
-                <Case title="La sécurité avant tout" description="Des opérateurs surveilleront la capsule constamment en vol et pourront prendre le contrôle à distance en cas de nécessité." />
+                <Case title="La sécurité avant tout" description="Des opérateurs surveilleront la capsule tout au long de la durée du voyage et pourront prendre le contrôle à distance en cas de nécessité." />
                 <Case title="Mettez vous à l'aise" description="Installez-vous confortablement et profitez du voyage à bord d’AeroCap." />
             </div>
             
