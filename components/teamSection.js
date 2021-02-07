@@ -13,11 +13,11 @@ let persons = [
 
     { name: "Jade", lastName: "Fillet", job:"Responsable Création / Design", team:"Création/Design", r: -145, t: -85},
     
-    { name: "Melina", lastName: "Mathieu", job:"Animation et Modélisation 3D", team:"Animation 3D", r: -110, t: -85},
-    { name: "Théo", lastName: "CASANO", job:"Animation et Modélisation 3D", team:"Animation 3D", r: -110, t: -85},
+    { name: "Melina", lastName: "Mathieu", job:"Animation et modélisation 3D", team:"Animation 3D", r: -110, t: -85},
+    { name: "Théo", lastName: "CASANO", job:"Animation et modélisation 3D", team:"Animation 3D", r: -110, t: -85},
 
-    { name: "Emma", lastName: "Degas", job: "Montage vidéo", team:"Conception video & Animation", r: -110, t: -70},
-    { name: "Mickael", lastName: "Bagdian", job: "Montage vidéo", team:"Conception video & Animation", r: -110, t: -55},
+    { name: "Emma", lastName: "Degas", job: "Montage vidéo", team:"Conception video & animation", r: -110, t: -70},
+    { name: "Mickael", lastName: "Bagdian", job: "Montage vidéo", team:"Conception video & animation", r: -110, t: -55},
 ]
 const team = Object.entries(persons.reduce((acc, i) => (acc[i.team] = acc[i.team] ? [...acc[i.team], i] : [i], acc), []))
 console.log(team)
