@@ -25,19 +25,19 @@ const ProductSection = (props) => {
                     <motion.h1 initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1}}
                     className="text-5xl font-bold tracking-wide">Aerocap</motion.h1>
-                    <p className="mt-2">Vers l'infini et haut-delà !</p>
+                    <p className="mt-2">La capsule qui vous fait voyager</p>
                 </div>
                 <div className="justify-end hidden col-span-1 md:flex">
                     <img src="/capsule.png" className="h-36" />
                 </div>
             </div>
             <div className="relative grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 max-width">
-                <Case title="Energie verte" description="Le moteur fonctionne à l'hydrogène et à l'énergie solaire" />
-                <Case title="Altitude" description="A 500 mètres d'altitude, profitez du paysage tout autour de vous" />
-                <Case title="Vitesse" description="A plus de 200km/h , AeroCap vous assure une voyage rapide jusqu'à votre destination !" />
+                <Case title="Notre energie verte" description="Le moteur fonctionne à l'hydrogène et à l'énergie solaire" />
+                <Case title="Vers l'infini et au delà !" description="A 500 mètres d'altitude, profitez du paysage tout autour de vous" />
+                <Case title="A fond la caisse" description="A plus de 200km/h , AeroCap vous assure une voyage rapide jusqu'à votre destination !" />
                 <Case title="Accessibilité" description="Toi plus moi, plus eux, plus tous ceux qui le veulent...Notre capsule est accessible à tous !" />
                 <Case title="La sécurité avant tout" description="Des opérateurs surveilleront la capsule constamment en vol et pourront prendre le contrôle à distance en cas de nécessité" />
-                <Case title="Mettez vous à l'aise" description="Installez-vous confortablement et profiter du voyage à bord d’AeroCap" />
+                <Case title="Mettez vous à l'aise" description="Installez-vous confortablement et profitez du voyage à bord d’AeroCap" />
             </div>
             
         </div>
