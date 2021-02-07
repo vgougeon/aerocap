@@ -7,9 +7,9 @@ let persons = [
     { name: "Nicolas", lastName: "Seillé", job:"Tech team", team:"Equipe technique", r: -135, t: -65},
     { name: "Paul", lastName: "Berdier", job:"Tech team", team:"Equipe technique", r: -100, t: -75},
 
-    { name: "Théo", lastName: "Arnal", job:"Développeur", team:"Développeur" , r: -170, t: -35},
-    { name: "Raphael", lastName: "Arabeyre", job:"Développeur", team:"Développeur", r: -110, t: -65},
-    { name: "Thomas", lastName: "Alzonne", job:"Développeur", team:"Développeur", r: -110, t: -65},
+    { name: "Théo", lastName: "Arnal", job:"Développeur", team:"Développeurs" , r: -170, t: -35},
+    { name: "Raphael", lastName: "Arabeyre", job:"Développeur", team:"Développeurs", r: -110, t: -65},
+    { name: "Thomas", lastName: "Alzonne", job:"Développeur", team:"Développeurs", r: -110, t: -65},
 
     { name: "Jade", lastName: "Fillet", job:"Responsable Création / Design", team:"Création/Design", r: -145, t: -85},
     
