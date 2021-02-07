@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
       </Head>
-      <Header />
+      {/* <Header /> */}
       <Scroller />
       <HomeSection />
       <FindSection />
