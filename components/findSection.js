@@ -75,7 +75,7 @@ const FindSection = (props) => {
         }
     }, [start, end])
     return (
-        <div id="find" className="flex flex-col items-center justify-center min-h-screen px-5 bg-white xl:px-0 pt-52">
+        <div id="find" className="flex flex-col items-center justify-center min-h-screen px-5 pb-12 bg-white xl:px-0 pt-52">
             <div className="grid grid-cols-2 mb-5 max-width">
                 <div className="col-span-1">
                     <svg xmlns="http://www.w3.org/2000/svg" className="absolute text-blue-500 transform -translate-x-40 -translate-y-40 w-96 h-96 opacity-10"

@@ -12,7 +12,7 @@ const Case = (props) => {
 
 const ProductSection = (props) => {
     return (  
-        <div id="product" className="flex flex-col items-center justify-center min-h-screen px-5 bg-gray-100 xl:px-0">
+        <div id="product" className="flex flex-col items-center justify-center min-h-screen px-5 pb-12 overflow-hidden bg-gray-100 pt-52 xl:px-0">
             <div className="grid grid-cols-2 mb-5 max-width">
                 <div className="col-span-1">
                     <svg xmlns="http://www.w3.org/2000/svg" className="absolute text-green-500 transform -translate-x-40 -translate-y-40 w-96 h-96 opacity-10" 

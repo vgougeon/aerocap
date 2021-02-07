@@ -1,13 +1,15 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import YouTube from "react-youtube";
+import SocialNetwork from "./socialNetworks";
 
 const HomeSection = (props) => {
     const [video, setVideo] = useState(false)
     return (
-        <div id="home" className="flex items-center justify-center min-h-screen py-5 text-white">
+        <div id="home" className="flex items-center justify-center min-h-screen pt-12 text-white lg:py-5">
             <div className="grid grid-cols-1 px-5 max-width xl:px-0 md:grid-cols-2">
                 <div className="col-span-1 pb-20">
+                    <SocialNetwork />
                     <motion.h1 initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1 }}
                         className="text-3xl font-semibold md:text-5xl text-width">
