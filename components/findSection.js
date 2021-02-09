@@ -46,13 +46,13 @@ const Select = (props) => {
                             </div>
                         )}
                         {suggest.length === 0 &&
-                            <div class="sk-chase mx-auto mt-12">
-                                <div class="sk-chase-dot"></div>
-                                <div class="sk-chase-dot"></div>
-                                <div class="sk-chase-dot"></div>
-                                <div class="sk-chase-dot"></div>
-                                <div class="sk-chase-dot"></div>
-                                <div class="sk-chase-dot"></div>
+                            <div className="mx-auto mt-12 sk-chase">
+                                <div className="sk-chase-dot"></div>
+                                <div className="sk-chase-dot"></div>
+                                <div className="sk-chase-dot"></div>
+                                <div className="sk-chase-dot"></div>
+                                <div className="sk-chase-dot"></div>
+                                <div className="sk-chase-dot"></div>
                             </div>
                         }
                     </motion.div>

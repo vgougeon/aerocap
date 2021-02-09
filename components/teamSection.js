@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import React from "react";
 
 let persons = [
     { name: "Fadela", lastName: "El Miliani", job: "Chef de projet", team: "Chef de projet", r: -100, t: -50 },
@@ -39,7 +40,7 @@ const Person = (props) => {
 }
 
 const TeamSection = (props) => {
-    return (  
+    return (
         <div id="team" className="flex flex-col items-center justify-center min-h-screen px-5 pb-12 bg-white xl:px-0 pt-52">
             <div className="grid grid-cols-2 mb-5 max-width">
                 <div className="col-span-1">
@@ -56,9 +57,8 @@ const TeamSection = (props) => {
                     <p className="mt-2">Découvrez nos différentes équipes et nos différents profils !</p>
                 </div>
             </div>
-            
                 { team.map(([name, persons]) => 
-                    <>
+                    <React.Fragment key={name}>
                         <h3 className="flex items-center w-full my-5 text-xl font-semibold max-width">
                             { name.includes('Chef') ?
                             <span className="px-1.5 py-0.5 mr-2 text-xs font-normal text-white bg-blue-600 rounded">CHEF</span>:
@@ -78,10 +78,10 @@ const TeamSection = (props) => {
                         </h3>
                         <div className="relative grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 max-width">
                         { persons.map(person =>
-                            <Person {...person} />
+                            <Person key={person.lastName} {...person} />
                         )}
                         </div> 
-                    </>
+                    </React.Fragment>
                     
                 )}
             
