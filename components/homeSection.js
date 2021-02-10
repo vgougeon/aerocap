@@ -45,7 +45,7 @@ const HomeSection = (props) => {
                          animate={{ opacity: 1, x: 0, height: "auto"}} exit={{ opacity: 0, x: -50, height:0}}
                          transition={{ type:'tween', duration: 0.2}}>
                              <YouTube
-                                videoId={'hioA3QDZ81g'}
+                                videoId={'SUYmddo7VXI'}
                                 className={"h-72 w-full"}
                                 containerClassName={"h-72 bg-gray-700 rounded overflow-hidden shadow"}
                                 />
