@@ -6,6 +6,13 @@ import ProductSection from '../components/productionSection';
 import { Scroller } from '../components/scroller';
 import HomeSection from './../components/homeSection';
 import TeamSection from './../components/teamSection';
+if(typeof(window) !== 'undefined') {
+  import('react-ga').then((ReactGA) => {
+    ReactGA.initialize('G-ZS1N5JM8CQ');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  })
+}
+
 
 export default function Home() {
   return (
