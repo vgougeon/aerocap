@@ -110,7 +110,7 @@ const FindSection = (props) => {
                     <div className="w-full p-4 bg-white">
                         <h2 className="text-lg font-semibold">Votre trajet <span className="text-green-500">est disponible !</span></h2>
                         <span className="">Distance :  <b className="text-xl">{(status.distance / 1000).toFixed(2)}km</b></span><br />
-                        <span className="">Prix : <b className="text-xl">{ (6 + 0.98*((status.distance/1000)) / nb).toFixed(2) }€</b></span><br />
+                        <span className="">Prix : <b className="text-xl">{ (6 + 0.859*((status.distance/1000)) / nb).toFixed(2) }€</b></span><br />
                         <span className="">Durée : <b className="text-xl">{ moment.utc(moment.duration(status.distance/1000/3.5, 'minutes').as('milliseconds')).format('HH:mm:ss')}</b></span>
                         <a className="flex items-center justify-center h-10 px-3 mt-5 mr-2 text-white bg-blue-500 border-2 border-blue-300 rounded-md hover:bg-blue-600 whitespace-nowrap w-min">
                             C'est parti !
