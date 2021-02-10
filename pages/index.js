@@ -8,7 +8,7 @@ import HomeSection from './../components/homeSection';
 import TeamSection from './../components/teamSection';
 if(typeof(window) !== 'undefined') {
   import('react-ga').then((ReactGA) => {
-    ReactGA.initialize('UA-189401733-1');
+    ReactGA.initialize('UA-189401733-2');
     ReactGA.pageview(window.location.pathname + window.location.search);
   })
 }
